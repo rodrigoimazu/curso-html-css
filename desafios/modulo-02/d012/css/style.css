@@ -18,31 +18,29 @@
 html, body {
     min-height: 100vh;
     min-width: 300px;
+    background-color: darkgray;
     font-family: var(--fonte1);
     color: white;
 }
 
 header, footer {
-    min-width: 300px;
     background-color: black;
+    font-size: clamp(0.95rem, 1.5vw, 1.5rem);
     text-align: center;
 }
 
 header {
-    padding: 3.5vw 0;
+    padding: clamp(40px, 3.75vw, 60px) 5vw;
 }
 
 header > h1 {
+    padding-bottom: 2vw;
     font-family: var(--fonte2);
     font-variant: small-caps;
     font-size: clamp(3rem, 10vw, 10rem);
 }
 
-header > p {
-    font-size: clamp(0.75rem, 1.25vw, 1.5rem);
-}
-
-header > p > a, footer > p > a {
+header > p > a, header > p > a:visited, footer > p > a, footer > p > a:visited {
     color: inherit;
     font-weight: bolder;
     text-decoration: none;
@@ -52,14 +50,15 @@ header > p > a:hover, footer > p > a:hover {
     text-decoration: underline;
 }
 
-header > p > a:visited, footer > p > a:visited {
-    color: inherit;
-    font-weight: bolder;
-    text-decoration: none;
+section {
+    padding: 0.5vw 0;
+    padding-left: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-family: var(--fonte3);
+    font-size: clamp(1.25rem, 3.5vw, 3.5rem);
 }
 
-section {
-    padding: 2.5vw;
+section > p { 
+    margin: 3vw 0;
 }
 
 section.branco {
@@ -68,34 +67,30 @@ section.branco {
 }
 
 section.img {
+    background-color: darkgray;
     background-size: cover;
     background-attachment: fixed;
     background-position: right center;
     background-repeat: no-repeat;
-}
-
-section > p { 
-    margin: 2.5vw 0;
-    font-family: var(--fonte3);
-    font-size: clamp(1rem, 3.5vw, 3.5rem);
+    box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 section.img > p {
     display: inline-block;
     margin-left: -1rem;
-    padding: 0 1rem; 
-    background: rgba(0, 0, 0, 0.5);
-    text-shadow: 2px 2px 0 rgb(0, 0, 0);
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.75);
 }
 
-section.img1 {
-    background-image: url(../imagens/background001.jpg);
+section#img1 {
+    background-image: url('../imagens/background001.jpg');
 }
 
-section.img2 {
-    background-image: url(../imagens/background002.jpg);
+section#img2 {
+    background-image: url('../imagens/background002.jpg');
 }
 
 footer {
-    padding: 1.25vw 0;
+    padding: clamp(15px, 1.25vw, 20px) 5vw;
 }
